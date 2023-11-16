@@ -1,9 +1,14 @@
-use chdb::{option, options::QueryOption, Query};
+use chdb::{flag, option, Query};
 
 fn main() {
     let result = Query::new("SELECT number FROM numbers(10)")
-        .option(option!("log-level", "trace"))
+        .option(option!("format", "TSVWithNames"))
+        .option(flag!("verbose"))
         .exec()
         .unwrap();
-    println!("{}", result.to_string().unwrap());
+
+    println!("Elapsed: {}", result.elapsed);
+    println!("Rows: {}", result.rows_read);
+    println!("Bytes: {}", result.bytes_read);
+    println!("Result:\n{}", result.to_string().unwrap());
 }

@@ -11,13 +11,13 @@ pub enum QueryOption {
 #[macro_export]
 macro_rules! flag {
     ($flag_name:expr) => {
-        QueryOption::Flag($flag_name)
+        chdb::options::QueryOption::Flag($flag_name)
     };
 }
 
 #[macro_export]
 macro_rules! option {
     ($option_name: expr, $option_value: expr) => {
-        QueryOption::Option($option_name, $option_value)
+        chdb::options::QueryOption::Option($option_name, $option_value)
     };
 }

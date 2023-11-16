@@ -1,7 +1,11 @@
 [package]
 name = "chdb"
-version = "0.1.0"
+version = "0.1.2"
 edition = "2021"
+description = "Use clickhouse as library (chdb)"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/fixcik/chdb-rs"
+keywords = ["chdb", "libchdb", "clickhouse"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
